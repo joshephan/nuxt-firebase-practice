@@ -17,4 +17,24 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## firebase 환경 설정
+```bash
+# cli 설치
+$ npm install -g firebase-tools
+
+# 프로젝트와 관련된 계정 로그인
+$ firebase login
+```
+
+## firebase 배포
+
+```bash
+# 정적 파일 생성
+$ yarn generate
+
+# 파이어베이스 배포
+$ firebase deploy
+```
+
+
+
