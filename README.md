@@ -17,17 +17,26 @@ We will now get everything setup and deployed in 3 commands:
 
   **Note:** _All of these commands are ran from the root directory_
 
-1. Install Dependencies in all necessary directories and creates `.firebaserc` from from `.setup-firebaserc` by using a `postinstall hook`
+1. 의존성 모두 설치: package.json이 있으면 모두 시행. ~, /src, /prod/server 각각
 ```bash
 yarn
 ```
 
-2. Build The Project
+2. 파이어베이스 프로젝트 셋업
+- .setup-firebaserc에 등록한 프로젝트 아이디에 따라 필요한 파일을 생성.
+- 만약 .setup-firebaserc 파일이 없다면 .firebaserc에서 프로젝트 아이디를 직업 입력하고 아래의 코드는 실행할 필요가 없음.
+```bash
+yarn setup
+```
+
+3. 프로젝트 빌드
 ```bash
 yarn build
 ```
 
-3. Deploy To Firebase
+4. 파이어베이스 배포: 빌드가 포함됨. 
+- 프로젝트에 서버 역할을 해줄 Functions 기능이 필요하므로 가격 플랜을 Blaze로 변경해야함.
+- Functions를 알아서 생성하는데 이 과정이 오래걸림.
 ```bash
 yarn deploy
 ```
